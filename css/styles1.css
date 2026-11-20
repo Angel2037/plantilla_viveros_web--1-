@@ -1,0 +1,322 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f2;
+    color: #263b30;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.encabezado {
+    background: #174d3a;
+    color: white;
+    padding: 30px;
+    border-radius: 12px 12px 0 0;
+}
+
+.encabezado h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    color: #d5e8dc;
+}
+
+.formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.seccion {
+    margin-bottom: 25px;
+}
+
+.seccion h2 {
+    color: #1c6849;
+    font-size: 19px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dce8df;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd8ce;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #278454;
+    box-shadow: 0 0 0 2px #27845420;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.registrar {
+    background: #1b754b;
+    color: white;
+    flex: 1;
+}
+
+.registrar:hover {
+    background: #125b38;
+}
+
+.limpiar {
+    background: #e6eee8;
+    color: #315642;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #78877d;
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    .contenedor {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .fila {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-contenedor {
+    width: 100%;
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px #00000015;
+}
+
+.login-lateral {
+    background: #174d3a;
+    color: white;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.login-lateral h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.login-lateral p {
+    color: #d5e8dc;
+    line-height: 1.7;
+}
+
+.login-principal {
+    padding: 40px 35px;
+}
+
+.login-principal h2 {
+    color: #174d3a;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.descripcion {
+    color: #78877d;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.roles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.rol {
+    background: #f5f8f5;
+    border: 1px solid #ccd8ce;
+    border-radius: 9px;
+    padding: 17px 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+    color: #315642;
+}
+
+.rol:hover {
+    border-color: #278454;
+    background: #eaf4ec;
+}
+
+.rol.activo {
+    border: 2px solid #1b754b;
+    background: #e5f1e8;
+    color: #174d3a;
+}
+
+.rol .icono {
+    display: block;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.rol strong {
+    font-size: 12px;
+}
+
+.login-principal .campo {
+    margin-bottom: 20px;
+}
+
+.password-contenedor {
+    position: relative;
+}
+
+.password-contenedor input {
+    padding-right: 55px;
+}
+
+.ver-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    background: transparent;
+    color: #315642;
+    font-size: 12px;
+}
+
+.btn-login {
+    width: 100%;
+    background: #1b754b;
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: #125b38;
+}
+
+.recuperar {
+    display: block;
+    text-align: center;
+    color: #1b754b;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.login-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #78877d;
+    margin-top: 25px;
+}
+
+@media(max-width: 700px) {
+    .login-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .login-lateral {
+        padding: 25px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .login-principal {
+        padding: 30px 20px;
+    }
+}
+
+@media(max-width: 380px) {
+    .roles {
+        grid-template-columns: 1fr;
+    }
+}

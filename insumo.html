@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuevo Insumo - ViveroSmart</title>
+<link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+<header class="encabezado">
+<h1>🌱 Vivero Inteligente</h1>
+<p>Administración y control de inventarios</p>
+<h2>Registro de nuevo insumo</h2>
+</header>
+
+<form class="formulario" action="../backend/guardar_insumo.php" method="POST">
+
+<section class="seccion">
+<h2>1. Información del insumo</h2>
+
+<div class="fila">
+<div class="campo">
+<label>Código del insumo *</label>
+<input type="text" name="codigo" placeholder="INS-001" required>
+</div>
+
+<div class="campo">
+<label>Nombre del insumo *</label>
+<input type="text" name="nombre" placeholder="Nombre del producto" required>
+</div>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Categoría *</label>
+<select name="categoria" required>
+<option value="">Seleccionar</option>
+<option>Fertilizantes</option>
+<option>Abonos</option>
+<option>Sustratos</option>
+<option>Herramientas</option>
+<option>Semillas</option>
+<option>Bolsas y bandejas</option>
+<option>Productos fitosanitarios</option>
+<option>Otros</option>
+</select>
+</div>
+
+<div class="campo">
+<label>Unidad de medida *</label>
+<select name="unidad" required>
+<option value="">Seleccionar</option>
+<option>Unidad</option>
+<option>Kilogramos</option>
+<option>Gramos</option>
+<option>Litros</option>
+<option>Mililitros</option>
+<option>Bultos</option>
+<option>Paquetes</option>
+</select>
+</div>
+</div>
+
+<div class="campo">
+<label>Descripción</label>
+<textarea name="descripcion" placeholder="Características del insumo..."></textarea>
+</div>
+</section>
+
+<section class="seccion">
+<h2>2. Control de inventario</h2>
+
+<div class="fila">
+<div class="campo">
+<label>Cantidad inicial *</label>
+<input type="number" name="cantidad" min="0" step="0.01" required>
+</div>
+
+<div class="campo">
+<label>Stock mínimo</label>
+<input type="number" name="stock_minimo" min="0" step="0.01">
+</div>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Precio unitario</label>
+<input type="number" name="precio" min="0" step="0.01">
+</div>
+
+<div class="campo">
+<label>Fecha de ingreso</label>
+<input type="date" name="fecha_ingreso">
+</div>
+</div>
+</section>
+
+<section class="seccion">
+<h2>3. Proveedor y almacenamiento</h2>
+
+<div class="campo">
+<label>Proveedor</label>
+<select name="proveedor_id">
+<option value="">Seleccionar proveedor</option>
+</select>
+</div>
+
+<div class="campo">
+<label>Ubicación de almacenamiento</label>
+<input type="text" name="ubicacion"
+placeholder="Ej. Bodega principal">
+</div>
+</section>
+
+<div class="botones">
+<button type="submit" class="registrar">Registrar insumo</button>
+<button type="reset" class="limpiar">Limpiar</button>
+</div>
+
+</form>
+
+<footer>© 2026 Vivero Inteligente</footer>
+</div>
+</body>
+</html>

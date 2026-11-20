@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva Actividad - Vivero Inteligente</title>
+<link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+<header class="encabezado">
+<h1>🌱 ViveroSmart</h1>
+<p>Control de actividades productivas</p>
+<h2>Registro de nueva actividad</h2>
+</header>
+
+<form class="formulario" action="../backend/guardar_actividad.php" method="POST">
+
+<section class="seccion">
+<h2>1. Información de la actividad</h2>
+
+<div class="campo">
+<label>Nombre de la actividad *</label>
+<input type="text" name="nombre_actividad"
+placeholder="Ej. Fertilización de plantas" required>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Tipo de actividad *</label>
+<select name="tipo_actividad" required>
+<option value="">Seleccionar</option>
+<option>Riego</option>
+<option>Fertilización</option>
+<option>Poda</option>
+<option>Fumigación</option>
+<option>Siembra</option>
+<option>Trasplante</option>
+<option>Control de plagas</option>
+<option>Mantenimiento</option>
+<option>Otra</option>
+</select>
+</div>
+
+<div class="campo">
+<label>Lote relacionado *</label>
+<select name="lote_id" required>
+<option value="">Seleccionar lote</option>
+</select>
+</div>
+</div>
+</section>
+
+<section class="seccion">
+<h2>2. Programación y ejecución</h2>
+
+<div class="fila">
+<div class="campo">
+<label>Fecha de actividad *</label>
+<input type="date" name="fecha" required>
+</div>
+
+<div class="campo">
+<label>Hora</label>
+<input type="time" name="hora">
+</div>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Responsable *</label>
+<input type="text" name="responsable" required>
+</div>
+
+<div class="campo">
+<label>Estado</label>
+<select name="estado">
+<option>Programada</option>
+<option>En ejecución</option>
+<option>Finalizada</option>
+<option>Cancelada</option>
+</select>
+</div>
+</div>
+
+<div class="campo">
+<label>Duración (horas)</label>
+<input type="number" name="duracion" min="0" step="0.5">
+</div>
+</section>
+
+<section class="seccion">
+<h2>3. Insumos y observaciones</h2>
+
+<div class="campo">
+<label>Insumo utilizado</label>
+<select name="insumo_id">
+<option value="">Seleccionar insumo</option>
+</select>
+</div>
+
+<div class="campo">
+<label>Cantidad utilizada</label>
+<input type="number" name="cantidad_insumo" min="0" step="0.01">
+</div>
+
+<div class="campo">
+<label>Observaciones</label>
+<textarea name="observaciones"
+placeholder="Describa los trabajos realizados y sus resultados..."></textarea>
+</div>
+</section>
+
+<div class="botones">
+<button type="submit" class="registrar">Guardar actividad</button>
+<button type="reset" class="limpiar">Limpiar</button>
+</div>
+
+</form>
+
+<footer>© 2026 Vivero Inteligente</footer>
+</div>
+</body>
+</html>

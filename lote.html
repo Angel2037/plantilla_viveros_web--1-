@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="css/styles1.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuevo Lote - Vivero Inteligente</title>
+<link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+<header class="encabezado">
+<h1>🌱 ViveroSmart</h1>
+<p>Gestión y trazabilidad de viveros frutícolas</p>
+<h2>Registro de nuevo lote</h2>
+</header>
+
+<form class="formulario" action="../backend/guardar_lote.php" method="POST">
+
+<section class="seccion">
+<h2>1. Información del lote</h2>
+
+<div class="fila">
+<div class="campo">
+<label>Código del lote *</label>
+<input type="text" name="codigo_lote" placeholder="Ej. LOT-001" required>
+</div>
+<div class="campo">
+<label>Nombre del lote</label>
+<input type="text" name="nombre_lote" placeholder="Nombre del lote">
+</div>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Vivero *</label>
+<select name="vivero_id" required>
+<option value="">Seleccionar vivero</option>
+</select>
+</div>
+<div class="campo">
+<label>Especie *</label>
+<select name="especie" required>
+<option value="">Seleccionar especie</option>
+<option>Arándano</option>
+<option>Fresa</option>
+<option>Mora</option>
+<option>Frambuesa</option>
+<option>Manzana</option>
+<option>Durazno</option>
+<option>Otra</option>
+</select>
+</div>
+</div>
+
+<div class="campo">
+<label>Variedad</label>
+<input type="text" name="variedad" placeholder="Ej. Biloxi">
+</div>
+</section>
+
+<section class="seccion">
+<h2>2. Información productiva</h2>
+
+<div class="fila">
+<div class="campo">
+<label>Cantidad inicial de plantas *</label>
+<input type="number" name="cantidad_inicial" min="1" required>
+</div>
+<div class="campo">
+<label>Unidad de medida</label>
+<select name="unidad">
+<option value="Plantas">Plantas</option>
+<option value="Semillas">Semillas</option>
+<option value="Estacas">Estacas</option>
+</select>
+</div>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Fecha de establecimiento *</label>
+<input type="date" name="fecha_establecimiento" required>
+</div>
+<div class="campo">
+<label>Fecha estimada de finalización</label>
+<input type="date" name="fecha_finalizacion">
+</div>
+</div>
+
+<div class="campo">
+<label>Ubicación dentro del vivero</label>
+<input type="text" name="ubicacion" placeholder="Ej. Invernadero 1">
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Estado del lote</label>
+<select name="estado">
+<option>En producción</option>
+<option>En crecimiento</option>
+<option>Listo para venta</option>
+<option>Finalizado</option>
+</select>
+</div>
+<div class="campo">
+<label>Responsable</label>
+<input type="text" name="responsable">
+</div>
+</div>
+</section>
+
+<section class="seccion">
+<h2>3. Observaciones</h2>
+<div class="campo">
+<label>Descripción del lote</label>
+<textarea name="descripcion" placeholder="Características y observaciones..."></textarea>
+</div>
+</section>
+
+<div class="botones">
+<button type="submit" class="registrar">Registrar lote</button>
+<button type="reset" class="limpiar">Limpiar</button>
+</div>
+
+</form>
+
+<footer>© 2026 Vivero Inteligente</footer>
+</div>
+</body>
+</html>

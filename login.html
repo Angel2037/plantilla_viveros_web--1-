@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión - Vivero Inteligente</title>
+
+<link rel="stylesheet" href="css/styles1.css">
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+<div class="login-contenedor">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="login-lateral">
+
+        <div class="logo">🌱</div>
+
+        <h1>ViveroSmart</h1>
+
+        <p>
+            Plataforma inteligente para la gestión,
+            administración y trazabilidad de viveros frutícolas.
+        </p>
+
+        <p style="margin-top:25px;">
+            Tecnología e innovación para el sector agrícola.
+        </p>
+
+    </div>
+
+    <!-- PANEL DE INGRESO -->
+    <div class="login-principal">
+
+        <h2>Bienvenido</h2>
+
+        <p class="descripcion">
+            Ingresa tus datos para acceder a la plataforma.
+        </p>
+
+        <form action="backend/login.php" method="POST">
+
+            <label>Selecciona tu tipo de acceso</label>
+
+            <div class="roles">
+
+                <div class="rol activo"
+                     onclick="seleccionarRol('Administrador', this)">
+                    <span class="icono">🛡️</span>
+                    <strong>Administrador</strong>
+                </div>
+
+                <div class="rol"
+                     onclick="seleccionarRol('Trabajador', this)">
+                    <span class="icono">👨‍🌾</span>
+                    <strong>Trabajador</strong>
+                </div>
+
+                <div class="rol"
+                     onclick="seleccionarRol('Usuario', this)">
+                    <span class="icono">👤</span>
+                    <strong>Usuario</strong>
+                </div>
+
+            </div>
+
+            <input type="hidden" name="rol"
+                   id="rol" value="Administrador">
+
+            <div class="campo">
+                <label>Correo electrónico</label>
+                <input type="email"
+                       name="correo"
+                       placeholder="Ingresa tu correo"
+                       required>
+            </div>
+
+            <div class="campo">
+                <label>Contraseña</label>
+
+                <div class="password-contenedor">
+                    <input type="password"
+                           name="password"
+                           id="password"
+                           placeholder="Ingresa tu contraseña"
+                           required>
+
+                    <button type="button"
+                            class="ver-password"
+                            onclick="mostrarPassword()">
+                        Ver
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login"  > <a href="index.html">
+                Iniciar sesión </a>
+            </button>
+
+            <a href="recuperar_password.html"
+               class="recuperar">
+                ¿Olvidaste tu contraseña?
+            </a>
+
+        </form>
+
+        <div class="login-footer">
+            © 2026 Vivero Inteligente
+            <br>
+            Gestión y trazabilidad agrícola
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function seleccionarRol(rol, elemento) {
+
+    document.getElementById("rol").value = rol;
+
+    let opciones = document.querySelectorAll(".rol");
+
+    opciones.forEach(function(opcion) {
+        opcion.classList.remove("activo");
+    });
+
+    elemento.classList.add("activo");
+}
+
+function mostrarPassword() {
+
+    let password = document.getElementById("password");
+
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+}
+
+</script>
+
+</body>
+</html>

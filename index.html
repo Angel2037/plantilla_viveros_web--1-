@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ViveroSmart | Gestión de viveros</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span>🌱</span><div><b>ViveroSmart</b><small>Gestión inteligente</small></div></div>
+  <nav>
+    <a class="active" href="#inicio" data-page="inicio">▦　Panel principal</a>
+    <a href="#viveros" data-page="viveros">♧　Viveros</a>
+    <a href="#lotes" data-page="lotes">▤　Lotes y trazabilidad</a>
+    <a href="#produccion" data-page="produccion">🌿　Producción</a>
+    <a href="#inventario" data-page="inventario">▣　Inventario</a>
+    <a href="#clientes" data-page="clientes">♙　Clientes y proveedores</a>
+    <a href="#ventas" data-page="ventas">＄　Ventas y costos</a>
+    <a href="#Qr" data-page="qr">Accceso QR</a>
+    <a href="#reportes" data-page="reportes">▥　Reportes</a>
+  </nav><div class="sidefoot">● Prototipo académico<br><small>Versión 1.0</small></div>
+</aside>
+<main>
+<header><button id="menu">☰</button><div><small>PLATAFORMA DE ADMINISTRACIÓN</small><h1 id="heading">Panel principal</h1></div><div class="profile">AM　<b>Administrador</b></div></header>
+<section id="inicio" class="page active">
+ <div class="hero"><div><small>RESUMEN GENERAL</small><h2>¡Bienvenido a ViveroSmart!</h2><p>Controla tus procesos, consulta tus lotes y toma decisiones con información organizada.</p></div><span>🌳</span></div>
+ <div class="stats">
+  <article><label>Plantas registradas</label><strong>12.450</strong><small>↑ 8,4% este mes</small></article>
+  <article><label>Lotes activos</label><strong>28</strong><small>En seguimiento</small></article>
+  <article><label>Alertas de inventario</label><strong>3</strong><small class="warn">Requieren revisión</small></article>
+  <article><label>Ventas del mes</label><strong>$8,6 M</strong><small>↑ 5,2% este mes</small></article>
+ </div>
+ <div class="columns"><article class="panel"><h3>Actividad reciente</h3><table><tr><th>Fecha</th><th>Actividad</th><th>Lote</th><th>Estado</th></tr><tr><td>10/11/2026</td><td>Actualización de inventario</td><td>AR-024</td><td>Completado</td></tr><tr><td>09/11/2026</td><td>Registro de producción</td><td>AR-023</td><td>En proceso</td></tr><tr><td>08/11/2026</td><td>Alerta por insumos bajos</td><td>General</td><td>Pendiente</td></tr></table></article>
+ <article class="panel"><h3>Alertas inteligentes</h3><p>⚠ Inventario bajo — Abono orgánico</p><p>⚠ Pérdidas por revisar — Lote AR-021</p><p>⚠ Actividad pendiente — Control fitosanitario</p></article></div>
+ <p class="note">Los datos son demostrativos. Reemplázalos por información real al conectar una base de datos.</p>
+</section>
+<section id="viveros" class="page"><div class="sectionhead"><div><h2>Gestión de viveros</h2><p>Administra las unidades productivas.</p></div> <a href="viveros.html"><button data-demo="vivero" >  ＋ Nuevo vivero</button></a></div><article class="panel"><table><tr><th>Nombre</th><th>Ubicación</th><th>Responsable</th><th>Estado</th></tr><tr><td>Vivero Santa Lucía</td><td>Duitama, Boyacá</td><td>Administrador</td><td>Activo</td></tr><tr><td>Vivero El Robledal</td><td>Duitama, Boyacá</td><td>Encargado</td><td>Activo</td></tr></table></article></section>
+<section id="lotes" class="page"><div class="sectionhead"><div><h2>Lotes y trazabilidad</h2><p>Consulta el historial de cada lote de plantas.</p></div> <a href="lote.html"><button data-demo="lote">＋ Registrar lote</button></a></div><article class="panel"><table><tr><th>Código</th><th>Especie</th><th>Variedad</th><th>Cantidad</th><th>Estado</th><th>Pasaporte</th></tr><tr><td>AR-024</td><td>Arándano</td><td>Biloxi</td><td>1.200</td><td>Activo</td><td><button class="light" data-qr="AR-024">Ver QR</button></td></tr><tr><td>AR-023</td><td>Arándano</td><td>Legacy</td><td>850</td><td>En desarrollo</td><td><button class="light" data-qr="AR-023">Ver QR</button></td></tr></table></article></section>
+<section id="produccion" class="page"><div class="sectionhead"><div><h2>Producción</h2><p>Registra actividades, cantidades producidas y pérdidas.</p></div> <a href="actividad.html"><button data-demo="actividad">＋ Registrar actividad</button></a></div><div class="stats"><article><label>Plantas producidas</label><strong>2.650</strong></article><article><label>Pérdidas registradas</label><strong>84</strong></article><article><label>Supervivencia estimada</label><strong>96,8%</strong></article></div></section>
+<section id="inventario" class="page"><div class="sectionhead"><div><h2>Inventario</h2><p>Controla plantas, insumos y materiales.</p></div><a href="insumo.html"><button data-demo="insumo">＋ Agregar insumo</button></a></div><article class="panel"><table><tr><th>Insumo</th><th>Categoría</th><th>Existencia</th><th>Mínimo</th><th>Estado</th></tr><tr><td>Abono orgánico</td><td>Fertilizante</td><td>4 unidades</td><td>10</td><td class="warn">Bajo</td></tr><tr><td>Bandejas germinadoras</td><td>Material</td><td>45 unidades</td><td>15</td><td>Disponible</td></tr><tr><td>Sustrato</td><td>Insumo</td><td>32 sacos</td><td>10</td><td>Disponible</td></tr></table></article></section>
+<section id="clientes" class="page"><div class="sectionhead"><div><h2>Clientes y proveedores</h2><p>Centraliza los contactos comerciales.</p></div><a href="clientes_probedores.html"><button data-demo="contacto">＋ Nuevo contacto</button></a></div><article class="panel empty">♙<h3>Directorio comercial</h3><p>Administra aquí clientes y proveedores.</p></article></section>
+<section id="ventas" class="page"><div class="sectionhead"><div><h2>Ventas y costos</h2><p>Consulta operaciones comerciales y costos asociados.</p></div><a href="venta.html"><button data-demo="venta">＋ Registrar venta</button></a></div><div class="stats"><article><label>Ventas del mes</label><strong>$8.600.000</strong></article><article><label>Costos registrados</label><strong>$3.250.000</strong></article><article><label>Saldo estimado</label><strong>$5.350.000</strong></article></div></section>
+<section id="qr" class="page"><div class="sectionhead"><div><h2>Acceso a qr</h2><p>Consulta el vivero mediante QR.</p></div><button data-demo="venta">＋ Buscar</button></div><div class="stats"><article><label>Cargar qr</label><strong>Agregar imagen</strong></article></div></section>
+<section id="reportes" class="page"><div class="sectionhead"><div><h2>Reportes y análisis</h2><p>Indicadores para apoyar la toma de decisiones.</p></div><button id="print">Imprimir reporte</button></div><article class="panel"><h3>Reportes disponibles</h3><ul><li>Producción por lote</li><li>Existencias y alertas de inventario</li><li>Registro de pérdidas</li><li>Ventas y costos por periodo</li><li>Historial de trazabilidad</li></ul><p class="note">La generación automática requiere conectar la base de datos y desarrollar el backend.</p></article></section>
+<footer>ViveroSmart · Plantilla académica · Duitama, Boyacá</footer>
+</main><div id="toast"></div><script src="js/app.js"></script></body></html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuevo Contacto - Vivero Inteligente</title>
+<link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+<header class="encabezado">
+<h1>🌱 ViveroSmart</h1>
+<p>Gestión comercial y relaciones del vivero</p>
+<h2>Registro de nuevo contacto</h2>
+</header>
+
+<form class="formulario" action="../backend/guardar_contacto.php" method="POST">
+
+<section class="seccion">
+<h2>1. Clasificación del contacto</h2>
+
+<div class="campo">
+<label>Tipo de contacto *</label>
+<select name="tipo_contacto" required>
+<option value="">Seleccionar tipo</option>
+<option value="Cliente">Cliente</option>
+<option value="Proveedor">Proveedor</option>
+</select>
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Tipo de persona</label>
+<select name="tipo_persona">
+<option value="Natural">Persona natural</option>
+<option value="Juridica">Persona jurídica</option>
+</select>
+</div>
+
+<div class="campo">
+<label>NIT / Cédula</label>
+<input type="text" name="identificacion"
+placeholder="Número de identificación">
+</div>
+</div>
+</section>
+
+<section class="seccion">
+<h2>2. Información personal o empresarial</h2>
+
+<div class="campo">
+<label>Nombre completo o razón social *</label>
+<input type="text" name="nombre" required>
+</div>
+
+<div class="campo">
+<label>Nombre de contacto</label>
+<input type="text" name="persona_contacto"
+placeholder="Representante o persona encargada">
+</div>
+
+<div class="fila">
+<div class="campo">
+<label>Teléfono *</label>
+<input type="tel" name="telefono" required>
+</div>
+
+<div class="campo">
+<label>Correo electrónico</label>
+<input type="email" name="correo">
+</div>
+</div>
+</section>
+
+<section class="seccion">
+<h2>3. Ubicación</h2>
+
+<div class="fila">
+<div class="campo">
+<label>Departamento</label>
+<input type="text" name="departamento"
+value="Boyacá">
+</div>
+
+<div class="campo">
+<label>Municipio</label>
+<input type="text" name="municipio"
+value="Duitama">
+</div>
+</div>
+
+<div class="campo">
+<label>Dirección</label>
+<input type="text" name="direccion"
+placeholder="Dirección de residencia o empresa">
+</div>
+</section>
+
+<section class="seccion">
+<h2>4. Información adicional</h2>
+
+<div class="campo">
+<label>Estado del contacto</label>
+<select name="estado">
+<option value="Activo">Activo</option>
+<option value="Inactivo">Inactivo</option>
+</select>
+</div>
+
+<div class="campo">
+<label>Observaciones</label>
+<textarea name="observaciones"
+placeholder="Información adicional del contacto..."></textarea>
+</div>
+</section>
+
+<div class="botones">
+<button type="submit" class="registrar">Guardar contacto</button>
+<button type="reset" class="limpiar">Limpiar</button>
+</div>
+
+</form>
+
+<footer>© 2026 Vivero Inteligente</footer>
+</div>
+</body>
+</html>

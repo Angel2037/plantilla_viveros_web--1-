@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Viveros</title>
+<link rel="stylesheet" href="css/styles1.css">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <header class="encabezado">
+        <h1>🌱 ViveroSmart</h1>
+        <p>Plataforma de gestión y trazabilidad de viveros frutícolas</p>
+    </header>
+
+    <form class="formulario"
+          action="guardar_vivero.php"
+          method="POST">
+
+        <!-- INFORMACION GENERAL -->
+        <section class="seccion">
+            <h2>1. Información general</h2>
+
+            <div class="campo">
+                <label>Nombre del vivero *</label>
+                <input type="text" name="nombre"
+                       placeholder="Nombre del vivero"
+                       required>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>NIT / Identificación</label>
+                    <input type="text" name="nit">
+                </div>
+
+                <div class="campo">
+                    <label>Propietario *</label>
+                    <input type="text" name="propietario"
+                           required>
+                </div>
+            </div>
+        </section>
+
+        <!-- UBICACION -->
+        <section class="seccion">
+            <h2>2. Ubicación del vivero</h2>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Departamento *</label>
+                    <select name="departamento" required>
+                        <option value="">Seleccionar</option>
+                        <option value="Boyaca">Boyacá</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Municipio *</label>
+                    <input type="text" name="municipio"
+                           value="Duitama" required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Vereda / Dirección</label>
+                <input type="text" name="direccion"
+                       placeholder="Vereda o dirección">
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="seccion">
+            <h2>3. Información de contacto</h2>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Teléfono *</label>
+                    <input type="tel" name="telefono"
+                           placeholder="Número de contacto"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label>Correo electrónico</label>
+                    <input type="email" name="correo"
+                           placeholder="correo@ejemplo.com">
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCCION -->
+        <section class="seccion">
+            <h2>4. Información productiva</h2>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Área del vivero (m²)</label>
+                    <input type="number" name="area"
+                           min="0" step="0.01">
+                </div>
+
+                <div class="campo">
+                    <label>Capacidad productiva</label>
+                    <input type="number" name="capacidad"
+                           min="0">
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Especie principal *</label>
+                    <select name="especie" required>
+                        <option value="">Seleccionar especie</option>
+                        <option value="Arandano">Arándano</option>
+                        <option value="Fresa">Fresa</option>
+                        <option value="Mora">Mora</option>
+                        <option value="Frambuesa">Frambuesa</option>
+                        <option value="Manzana">Manzana</option>
+                        <option value="Durazno">Durazno</option>
+                        <option value="Otro">Otra</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Estado del vivero</label>
+                    <select name="estado">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                        <option value="En desarrollo">En desarrollo</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- OBSERVACIONES -->
+        <section class="seccion">
+            <h2>5. Información adicional</h2>
+
+            <div class="campo">
+                <label>Observaciones</label>
+                <textarea name="observaciones"
+                    placeholder="Escriba información adicional del vivero..."></textarea>
+            </div>
+        </section>
+
+        <!-- BOTONES -->
+        <div class="botones">
+            <button type="submit" class="registrar">
+                + Registrar vivero
+            </button>
+
+            <button type="reset" class="limpiar">
+                Limpiar formulario
+            </button>
+        </div>
+
+    </form>
+
+    <footer>
+        © 2026 Vivero Inteligente |
+        Gestión y trazabilidad agrícola
+    </footer>
+
+</div>
+
+</body>
+</html>
