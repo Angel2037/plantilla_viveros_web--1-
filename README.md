@@ -1,5 +1,5 @@
-# Plantilla web ViveroSmart
-Plantilla frontend para el proyecto de gestión, trazabilidad y proyección de viveros frutícolas en Duitama, Boyacá.
+# Plataforma web ViveroSmart
+Plataforma web  para el manejo gestión,control, trazabilidad y proyección de viveros frutícolas en Duitama, Boyacá.
 
 ## Abrir
 1. Descomprime el archivo ZIP.
